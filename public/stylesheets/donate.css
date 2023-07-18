@@ -1,0 +1,73 @@
+.main-h2{
+    color: black;
+    margin-top: 3em;
+    margin-bottom: .5em;
+}
+
+.donate-container{
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.info{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donate-button{
+    border: 1px solid black;
+    border-radius: .1em;
+    padding: 1em 2em 1em 2em;
+    margin-bottom: 6em;
+    transition: all .5s ease-in;
+    text-decoration: none;
+
+}
+
+.donate-button:hover{
+    background-color: #214773;
+    color: white;
+    font-weight: 600;
+    
+}
+
+.donate-text{
+    font-size: 1.1em;
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .donate-button{
+        border: 1px solid black;
+        border-radius: .1em;
+        padding: 1em 2em 1em 2em;
+        margin-bottom: 3em;
+        text-decoration: none;
+        background-color: #214773;
+        color: white;
+        font-weight: 600;
+        
+    }
+
+    .donate-container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/* Services styles */
+
+.time{
+    font-weight: 200;
+}

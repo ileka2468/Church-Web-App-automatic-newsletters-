@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content-uns {
+    border: 1px solid grey;
+    box-shadow: 2px;
+    width: 40%;
+    height: 60%;
+    background-color: whitesmoke;
+    margin-top: 10em;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    color: black;
+}

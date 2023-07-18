@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="containerD dev">
+        <h1>This website is currently under construction.</h1>
+        <p>Check back at a later date!</p>
+        <img src="images/construction.png">
+
+        <% if (typeof msg !== 'undefined') { %> 
+            <p> <%= msg %></p>
+        <% } %>
+    
+        <form action="/dev" method="post">
+            <label for="user">user:</label>
+            <input type="text" name="user">
+    
+            <label for="pass">password:</label>
+            <input type="password" name="pass">
+    
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

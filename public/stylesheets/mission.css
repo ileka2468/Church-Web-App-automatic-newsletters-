@@ -1,0 +1,69 @@
+body{
+    margin-top: 13em;
+}
+
+.mission-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4em;
+}
+.mission-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-right{
+    width: 65%;
+}
+
+.mission-left h1{
+    color: black;
+    font-size: 3em;
+    text-align: center;
+}
+
+.mission-left img {
+    width: 80%;
+}
+
+.missonL-button{
+    padding: 1em .5em 1em .5em;
+    width: fit-content;
+    background-color: #214773;
+    color: white;
+    border: 0;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.mission-left button:hover{
+    cursor: pointer;
+    opacity: .98;
+}
+
+.mission-text{
+    padding: 1em;
+}
+
+@media screen and (max-width: 900px) {
+    .mission-main{
+        flex-direction: column;
+    }
+
+    body{
+        margin-top: 0;
+    }
+
+    .menu{
+        background-color: #214773;
+        padding-bottom: 2em;
+    }
+
+    .mission-right{
+        width: 85%;
+    }
+}

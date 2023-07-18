@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/uns.css">
+    <title>Unsubscribe</title>
+</head>
+<body>
+    <div class="content-uns">
+        <div class="logo-div">
+            <img class="logo" src="/images/diocese-chicago.webp">
+            <h1 class="logo-text">St Margaret's Episcopal Church</h1>
+        </div>
+
+        <% if (typeof error !== "undefined") { %>
+            <p>Our system was unable to unsubscribe your email <b><%= error %></b> from the newsletter, please contact us if you require further assistance.</p>
+        <% } else if (typeof invalid !== "undefined") { %>
+            <p>Our system was unable to unsubscribe your email <b><%= invalid %></b> from the newsletter because it does not exist in the mailing list, if you beleive this is a mistake please contact us.</p>
+        <% } else if (typeof success !== "undefined") { %>
+            <p>Your email <b><%= success %></b> has successfully been unsubscribed from St Margaret's Episcopal Church newsletter and mailing list.</p>
+        <% } %>
+        
+    </div>
+</body>
+</html>

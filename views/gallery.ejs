@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="stylesheets/gallery.css">
+    <link href="stylesheets/ninja-slider.css" rel="stylesheet" type="text/css"/>
+    <!-- <link rel="stylesheet" href="stylesheets/mission.css"> -->
+    <script src="javascripts/ninja-slider.js" type="text/javascript"></script>
+    <script>
+        function lightbox(idx) {
+            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+            var ninjaSldr = document.getElementById("ninja-slider");
+            ninjaSldr.parentNode.style.display = "block";
+
+            nslider.init(idx);
+
+            var fsBtn = document.getElementById("fsBtn");
+            fsBtn.click();
+        }
+
+        function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+            if (isFullscreen) {
+                ninjaSldr.parentNode.style.display = "none";
+            }
+        }
+    </script>
+    <title>Gallery</title>
+</head>
+<body>
+  <%- include('partials/header') %>
+  <%- include('partials/mobile') %>
+
+  <div class="menu">
+    <p>Menu</p>
+    <i id="burger" class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+</div>
+
+<div class="content-wrapper">
+    <div style="display:none;">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                  <% image_links.forEach((imagelink, index) => { %>
+                    <li><a class="ns-img" href="<%= imagelink %>"></a></li>
+        
+                  <% }); %>
+                </ul>
+                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+    <div style="margin:20px auto;">
+        <div class="gallery">
+          <% image_links.forEach((imagelink, index) => { %>
+            <img src="<%= imagelink %>" onclick="lightbox(<%= index %>)">
+
+          <% }); %>      
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
+</body>
+</html>

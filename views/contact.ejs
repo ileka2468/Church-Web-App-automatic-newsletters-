@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="stylesheets/contact.css">
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/mobile') %>
+
+    <section class="hero-section">
+        <div class="menu">
+          <p>Menu</p>
+          <i id="burger" class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+        </div>
+        
+        <div class="hero-texts">
+          <!-- <h2 class="hero-textW">Welcome to</h2> -->
+          <h1 class="hero-text">St Margaret's Episcopal Church</h1>
+        </div>
+    
+        <div class="container">
+          <h2 class="nav-hero">REFLECTING CHRIST'S IMAGE</h2>
+          <h2 class="nav-hero">THROUGH LOVE, INCLUSION AND SERVICE</h2>
+        </div>
+      </section>
+
+      <h1 class="cfh1">Contact Form</h1>
+      <form class="cf" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5397d3da-e72f-4e16-a43f-553053fc9046">
+        <div class="half left cf">
+          <input required name="name" class="form" type="text" id="input-name" placeholder="Name *">
+          <input required name="email" class="form" type="email" id="input-email" placeholder="Email address *">
+          <input name="subject" class="form" type="text" id="input-subject" placeholder="Subject">
+        </div>
+        <div class="half right cf">
+          <textarea required class="form" name="message" type="text" id="input-message" placeholder="Message *"></textarea>
+        </div>
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        <button id="input-submit" type="submit">Submit</button>
+      </form>
+
+
+  <%- include('partials/footer') %>
+</body>
+</html>

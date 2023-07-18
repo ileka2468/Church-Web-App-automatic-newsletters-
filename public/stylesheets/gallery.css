@@ -1,0 +1,43 @@
+
+ body {
+  margin-top: 8em !important;
+ }
+ 
+ .content-wrapper{
+    padding-top: 1em !important;
+    padding: 5% 5% 0 12%;
+ }
+
+
+ .gallery{
+  width: 100%;
+ }
+
+ .gallery img:hover{
+   opacity: .9;
+   cursor: pointer;
+   transform: scale(1.05, 1.05);
+ }
+
+ .gallery img {
+  margin: 1em;
+  max-width: 90%;
+  max-height: 25em;
+ }
+
+ .hero-text{
+  padding-top: 1.5em;
+}
+
+
+@media screen and (max-width:750px){
+  body {
+    margin-top: 0 !important;
+   }
+   .menu{
+    background-color: #214773;
+    padding-bottom: 2em;
+  }
+}
+
+

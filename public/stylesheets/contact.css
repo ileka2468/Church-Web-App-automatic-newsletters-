@@ -1,0 +1,71 @@
+
+.cfh1 {
+    text-align: center;
+    color: #214773;
+    margin-top: 1em;
+  }
+  
+  form {
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+    margin-bottom: 10em;
+    margin-top: 2em;
+  }
+  form input, form textarea, form button {
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Poppins';
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    resize: none;
+  }
+  form input:focus, form textarea:focus {
+    box-shadow: 0 0px 2px #214773 !important;
+  }
+  form #input-submit {
+    color: white;
+    background: #17375b;
+    cursor: pointer;
+  }
+  form #input-submit:hover {
+    box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  }
+  form textarea {
+    height: 126px;
+  }
+  
+  .half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
+  }
+  
+  .right {
+    width: 50%;
+  }
+  
+  .left {
+    margin-right: 2%;
+  }
+  
+  .sform{
+    all: revert;
+  }
+  
+  @media (max-width: 480px) {
+    .half {
+      width: 100%;
+      float: none;
+      margin-bottom: 0;
+    }
+  }
+  
+  
