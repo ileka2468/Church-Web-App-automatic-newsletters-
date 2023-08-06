@@ -32,7 +32,7 @@ router.get('/', (req, res, next) => {
 
         // Fetch images without "bishop" tag
         imagekit.listFiles({
-            searchQuery: 'tags NOT IN ["bishop"]'
+            searchQuery: 'tags IN ["old_pics"]'
         }, (error, result) => {
             if (error) {
                 console.log(error);

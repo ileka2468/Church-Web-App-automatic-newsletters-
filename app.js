@@ -12,8 +12,14 @@ const missionRouter = require('./routes/mission');
 const unsubscribeRouter = require('./routes/unsubscribe');
 const donateRouter = require('./routes/donate');
 const servicesRouter = require('./routes/services');
+const readingsRouter = require('./routes/readings')
 
 const app = express();
+app.locals.is_production = app.get('env');
+app.locals.is_production == "development" ? require('dotenv').config() :
+
+  console.log(process.env.HOST)
+
 const pool = mysql.createPool({
   host: process.env.HOST,
   database: process.env.DATABASE,
@@ -26,7 +32,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.locals.is_production = app.get('env');
 
 
 app.use(session({
@@ -52,6 +57,7 @@ app.use('/mission', missionRouter);
 app.use('/unsubscribe', unsubscribeRouter);
 app.use('/donate', donateRouter);
 app.use('/services', servicesRouter);
+app.use('/readings', readingsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
