@@ -56,6 +56,11 @@ body{
 
     body{
         margin-top: 0;
+        
+    }
+
+    .menu{
+        display: none;
     }
 
     .menu{

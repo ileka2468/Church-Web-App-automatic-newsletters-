@@ -19,6 +19,31 @@
         <i id="burger" class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
     </div>
 
+    <h1 class="viewh1">Reading - <%= date_id %> </h1>
+
+    <div class="modal-box">
+
+        <div class="electronic-readings">
+
+            <img src="/images/book.png" alt="" class="book-logo">
+            <p>Electronic Reading</p>
+
+            <a class="download-button" href="<%= pamphlet_link %>">View</a>
+
+        </div>
+
+        <div class="projection-slides">
+            
+            <img src="/images/slides.png" alt="" class="presentation-logo">
+
+            <p>Projection Slides</p>
+
+            <a class="download-button" href="">Download</a>
+        </div>
+
+
+    </div>
+    <p class="instructions">If you are a church goer, you can find the readings for todays service in electronic form by clicking the view button. You can also find the link to download the PowerPoints for today's service if you wish, although its meant for the projectionist.</p>
     
     <%- include('partials/footer') %>
 

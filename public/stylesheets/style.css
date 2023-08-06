@@ -202,6 +202,17 @@ body{
   margin-bottom: 16px;
 }
 
+.img-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.diver{
+  width: 80%;
+
+}
+
 .front-img{
   width: 20em;
   margin-bottom: 16px;

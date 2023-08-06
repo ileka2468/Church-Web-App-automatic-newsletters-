@@ -41,7 +41,19 @@ router.get('/', async function (req, res, next) {
 });
 
 router.get('/:date/view', (req, res, next) => {
-    res.render('readingonerec')
+
+    let query = `SELECT pamphlet_link FROM service_dates WHERE date = '${req.params.date}'`
+    req.pool.query(query, (err, result) => {
+        if (err) {
+            console.log(err)
+            res.render('error')
+        }
+        console.log(result)
+        res.render('readingonerec', { date_id: new Date(req.params.date.replace("-", "/")).toLocaleDateString('en-us', { weekday: "long", year: "numeric", month: "short", day: "numeric" }), pamphlet_link: result[0].pamphlet_link })
+
+    });;
+
+
 });
 
 module.exports = router;
