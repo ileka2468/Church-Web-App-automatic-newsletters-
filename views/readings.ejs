@@ -37,7 +37,7 @@
                             
                             <% dates[year][month].forEach(rec => { %>
 
-                                <a class="date-bubble" href="/readings/<%= `${new Date(rec.date).getFullYear()}-${String(new Date(rec.date).getMonth() + 1).padStart(2, '0')}-${String(new Date(rec.date).getDate()).padStart(2, '0')}`  %>/view"><%= new Date(rec.date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})  %></a>
+                                <a class="date-bubble" href="<%= rec.pamphlet_link %>"><%= new Date(rec.date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})  %></a>
 
                             <% }) %>
                             
