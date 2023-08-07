@@ -2,10 +2,6 @@ var express = require('express');
 var router = express.Router();
 var genDates = require('./genDates')
 var ImageKit = require("imagekit");
-const request = require('request');
-const archiver = require('archiver');
-const fs = require('fs');
-const path = require('path');
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
