@@ -54,9 +54,8 @@ body{
         flex-direction: column;
     }
 
-    body{
-        margin-top: 0;
-        
+    .viewh1{
+        margin-top: 10em;
     }
 
     .menu{

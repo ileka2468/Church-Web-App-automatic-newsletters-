@@ -208,10 +208,7 @@ body{
   justify-content: center;
 }
 
-.diver{
-  width: 80%;
 
-}
 
 .front-img{
   width: 20em;
@@ -237,6 +234,15 @@ body{
     visibility: visible;
   }
 
+  .diver{
+    width: 80%;
+  
+  }
+
+  /* .electronic-readings, .projection-slides{
+    width: 80%;
+  } */
+
   .exit-menu{
     display: flex;
     justify-content: flex-end;
@@ -255,12 +261,29 @@ body{
     align-items: center;
   }
 
+  body{
+    margin-top: 0;
+  }
+
   .menu p {
     color: white;
   }
   .church-header {
     display: none;
 }
+
+/* 
+.modal-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.viewh1{
+  margin-top: 1em;
+  font-size: 1.5em;
+} */
+
 
 .mobile-menu{
   position:fixed;

@@ -26,9 +26,9 @@
         <div class="electronic-readings">
 
             <img src="/images/book.png" alt="" class="book-logo">
-            <p>Electronic Reading</p>
+            <p class="r-text">Electronic Reading</p>
 
-            <a class="download-button" href="<%= pamphlet_link %>">View</a>
+            <a class="download" href="<%= pamphlet_link %>">View</a>
 
         </div>
 
@@ -36,9 +36,27 @@
             
             <img src="/images/slides.png" alt="" class="presentation-logo">
 
-            <p>Projection Slides</p>
+            <p class="r-text" >Projection Slides</p>
 
-            <a class="download-button" href="">Download</a>
+            <div class="dl-list">
+                <p >First Reading</p>
+                <a class="download" href="<%= gospelData["FR"] %>">Download</a>
+            </div>
+
+            <div class="dl-list">
+                <p >Second Reading</p>
+                <a class="download" href="<%= gospelData["SR"] %>" >Download</a>
+            </div>
+
+            <div class="dl-list">
+                <p >Psalm</p>
+                <a class="download" href="<%= gospelData["Pm"] %>">Download</a>
+            </div>
+
+            <div class="dl-list">
+                <p >Gospel</p>
+                <a class="download" href="<%= gospelData["GP"] %>">Download</a>
+            </div>
         </div>
 
 
