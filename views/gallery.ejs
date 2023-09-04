@@ -54,7 +54,10 @@
     <div style="margin:20px auto;">
         <div class="gallery">
           <% image_links.forEach((imagelink, index) => { %>
-            <img src="<%= imagelink %>" onclick="lightbox(<%= index %>)">
+            <div class="img-container">
+                <img src="<%= imagelink %>" onclick="lightbox(<%= index %>)">
+            </div>
+            
 
           <% }); %>      
         </div>
