@@ -18,26 +18,24 @@ const app = express();
 app.locals.is_production = app.get('env');
 app.locals.is_production == "development" ? require('dotenv').config() :
 
-  console.log(process.env.HOST)
+// const pool = mysql.createPool({
+//   host: process.env.HOST,
+//   database: process.env.DATABASE,
+//   user: process.env.USER,
+//   password: process.env.PASSWORD
+// });
 
-const pool = mysql.createPool({
-  host: process.env.HOST,
-  database: process.env.DATABASE,
-  user: process.env.USER,
-  password: process.env.PASSWORD
-});
-
-app.use((req, res, next) => {
-  req.pool = pool;
-  next();
-});
-
+// app.use((req, res, next) => {
+//   req.pool = pool;
+//   next();
+// });
 
 
 app.use(session({
-  secret: process.env.SECRET,
+  secret: "fixlata",
   cookie: { maxAge: 60 * 60 * 1000 },
-  saveUninitialized: false
+  saveUninitialized: false,
+  resave: false
 }))
 
 // view engine setup
@@ -51,13 +49,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use('/gallery', galleryRouter);
+// app.use('/gallery', galleryRouter);
 app.use('/contact', contactRouter);
 app.use('/mission', missionRouter);
 app.use('/unsubscribe', unsubscribeRouter);
 app.use('/donate', donateRouter);
 app.use('/services', servicesRouter);
-app.use('/readings', readingsRouter)
+// app.use('/readings', readingsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -72,6 +70,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
+  console.log(err);
   res.render('error');
 });
 
